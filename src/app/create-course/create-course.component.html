@@ -1,0 +1,15 @@
+<h3>Service Shared between components</h3>
+
+<input type="text" #course>
+
+<button type="button" (click)="onAddCourse(course.value)">Add Course</button>
+
+<br>
+
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
+
+<app-receive-course-added></app-receive-course-added>
